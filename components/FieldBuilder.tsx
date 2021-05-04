@@ -1,3 +1,4 @@
+import { Grid } from '@material-ui/core';
 import InputText from './InputText';
 import SelectComponent from './Select';
 import CheckBox from './CheckBox';
@@ -41,7 +42,11 @@ const FieldBuilder = ({ field, value, handleChange }: FormBuilderProps) => {
     ),
   };
 
-  return FieldElement[field.type];
+  return (
+    <Grid item xs={12}>
+      {FieldElement[field.type]}
+    </Grid>
+  );
 };
 
 export default FieldBuilder;

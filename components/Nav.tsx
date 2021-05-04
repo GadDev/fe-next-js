@@ -4,9 +4,9 @@ import styles from '../styles/Nav.module.css';
 
 const Nav = (): JSX.Element => {
   return (
-    <nav className={styles.nav}>
+    <nav data-testid="menu" className={styles.nav}>
       <ul>
-        <li>
+        <li data-testid="nav-item">
           <Link href="/">Home</Link>
         </li>
       </ul>
